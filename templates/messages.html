@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h3>Messages</h3><small>Welcome <strong>{{session.username}}</strong></small>
+<a href='send/{{session.username}}'>Sarahah.top/u/{{session.username}}</a>
+<hr />
+    <h1>Messages List</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                
+               
+            </tr>
+        </thead>
+        <tbody>
+        {% for msg in data %}
+
+            <tr>
+                <td><div class="bg-info">{{msg['message'] | safe     }}</div></td>
+                
+                
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

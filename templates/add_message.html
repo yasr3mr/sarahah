@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Send Message</h1>
+    {% from 'include/_formhelpers.html' import render_field%}
+	<form method="POST" action="">
+		
+		<div class="form-group">
+			{{render_field(form.message, class_="form-control", id='editor')}}
+		</div>
+
+		<input type="submit" value="Send" class="btn btn-primary" />
+
+	</form>
+{% endblock %}
